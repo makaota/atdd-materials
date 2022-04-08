@@ -12,7 +12,8 @@
     android:theme="@style/AppTheme">
 
     <!-- Splash Activity -->
-    <activity android:name=".app.SplashActivity">
+    <activity android:name=".app.SplashActivity"
+        android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +24,7 @@
     <!-- Main Activity -->
     <activity android:name=".MainActivity" />
     <activity android:name=".WishlistDetailActivity" />
-    <activity android:name=".Test"></activity>
+   <!-- <activity android:name=".Test"></activity> -->
   </application>
 
 </manifest>
