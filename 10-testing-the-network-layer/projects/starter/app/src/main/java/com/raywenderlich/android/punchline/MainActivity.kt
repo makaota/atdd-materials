@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
       render(uiModel)
     })
     viewModel.getJoke()
+
+    binding.buttonNewJoke.setOnClickListener {
+      viewModel.getJoke()
+    }
   }
 
   private fun render(uiModel: UiModel) {
@@ -60,6 +64,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun showJoke(joke: Joke) {
+    binding.textJoke.text = joke.joke
   }
 
   private fun showError(error: String) {
